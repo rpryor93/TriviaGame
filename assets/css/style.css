@@ -61,25 +61,43 @@ ul {text-shadow: 1px 1px blue;
 
 
 
-#results {
-font-family: 'Libre Baskerville', serif;
-background: #dddada; 
-color: 000000; 
-padding: 3px; 
-text-align: center; 
-width: 200px; 
-cursor: pointer; 
-border: 1px solid gray; 
-}
+#resultsGo {
+            font-family: 'Libre Baskerville', serif;
+            background: blue; 
+            color:white; 
+            padding: 3px; 
+            text-align: center; 
+            width: 200px; 
+            cursor: pointer; 
+            border: 1px solid gray;
+            font-size: 20px;
+    }
 
 
-#results:hover { 
-background: red; 
-color: #ffffff; 
-padding: 3px; 
-text-align: center; 
-font-weight: bold;
-cursor: pointer; 
-border: 1px solid gray;
+#resultsGo:hover { 
+            background: black; 
+            color: red; 
+            padding: 3px; 
+            text-align: center; 
+            font-weight: bold;
+            cursor: pointer; 
+            border: 1px solid gray;
 
 } 
+
+#results {
+           font-family: 'Libre Baskerville', serif;
+           font-size: 25px;
+           width: 300px;
+           padding: 30px;
+           position: relative;
+           left: 80px;
+           text-align: center;
+           color: blue;
+           text-shadow: 1px 1px black;
+            
+    
+    
+    
+    
+}

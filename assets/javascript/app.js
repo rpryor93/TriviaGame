@@ -1,6 +1,7 @@
 $(document).ready(function(){
-	$("#results").hide();
+	$("#resultsGo").hide();
     $("#actionArea").hide();
+    $("#results").hide();
     console.log(document);  });
 
 var correctTotal = 0;
@@ -12,12 +13,12 @@ $("#start").click(function(){
 		begin ();
 		countDown();
 		$("#actionArea").show();
-		$("#results").show();
+		$("#resultsGo").show();
 		
 	});
 
 
-$("#results").on("click",stop)
+$("#resultsGo").on("click", stop);
 
 
 function begin (){
@@ -29,8 +30,12 @@ function countDown(){
 		timeLeft--;
 		$("#time").html(timeLeft + " seconds remaining");
 		if(timeLeft==0){
-        stop();
+        stop(alert("You Fucking Suck!!"));
         }
+}
+
+function reset(){
+	timeLeft = 61; 
 }
 
 function stop(){
@@ -45,14 +50,12 @@ function stop(){
 		} else {
 			wrongTotal++;
 		}
-
-		if($("input[name = q2]:checked").val() == $("#q2c").val()){
+        if($("input[name = q2]:checked").val() == $("#q2c").val()){
 			correctTotal++;
 		} else {
 			wrongTotal++;
 		}
-
-		if($("input[name = q3]:checked").val() == $("#q3d").val()){
+        if($("input[name = q3]:checked").val() == $("#q3d").val()){
 			correctTotal++;
 		} else {
 			wrongTotal++;
@@ -62,8 +65,7 @@ function stop(){
 		} else {
 			wrongTotal++;
 		}
-
-		if($("input[name = q5]:checked").val() == $("#q5b").val()){
+        if($("input[name = q5]:checked").val() == $("#q5b").val()){
 			correctTotal++;
 		} else {
 			wrongTotal++;
@@ -98,10 +100,10 @@ function stop(){
 	   $("#results").show();
 	   $(".answer").empty();
 	   $(".question").empty();
-	   $("#time").hide();
+	   $("#actionArea").hide();
+       $("#time").hide();
 	   $("#resultsGo").hide();
-	   $("#score").html("Correct Ansewrs: " + correct + "<br>" + "Incorrect Answers: " + incorrect + "<br>");
-        
-        console.log(stop);
+	   $("#results").html("Correct Answers: " + correctTotal + "<br>" + "Incorrect Answers: " + wrongTotal);
+       
 }
                    
