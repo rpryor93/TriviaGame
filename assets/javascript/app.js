@@ -1,4 +1,107 @@
-function myFunction() {
-    var x = document.getElementById("myRadio");
-    x.checked = true;
+$(document).ready(function(){
+	$("#results").hide();
+    $("#actionArea").hide();
+    $("#title").hide();
+    console.log(document);  });
+
+var correctTotal = 0;
+var wrongTotal = 0;
+var timeLeft = 61;
+    
+$("#start").click(function(){
+        $("#start").hide();
+		begin ();
+		countDown();
+		$("#actionArea").show();
+		$("#results").show();
+		
+	});
+
+
+$("#results").on("click",stop)
+
+
+function begin (){
+		counter = setInterval(countDown, 1000);
 }
+
+function countDown(){
+
+		timeLeft--;
+		$("#time").html(timeLeft + " seconds remaining");
+		if(timeLeft==0){
+        stop();
+        }
+}
+
+function stop(){
+
+		clearInterval(counter);
+		timeLeft=120;
+		correct =0;
+		incorrect =0;
+
+		if($("input[name = q2]:checked").val() == $("#q1d").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+
+		if($("input[name = q2]:checked").val() == $("#q2c").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+
+		if($("input[name = q3]:checked").val() == $("#q3d").val()){
+			correct ++;
+		} else {
+			incorrect++;
+		}
+		if($("input[name = q4]:checked").val() == $("#q4c").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+
+		if($("input[name = q5]:checked").val() == $("#q5b").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+		if($("input[name = q6]:checked").val() == $("#q6d").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+		if($("input[name = q7]:checked").val() == $("#q7d").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+		if($("input[name = q8]:checked").val() == $("#q8c").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+		if($("input[name = q9]:checked").val() == $("#q9a").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+		if($("input[name = q10]:checked").val() == $("#q10a").val()){
+			correct ++;
+		} else {
+			incorrect ++;
+		}
+
+        window.scrollTo(0,0);
+	   $("#results").show();
+	   $(".answer").empty();
+	   $(".question").empty();
+	   $("#time").hide();
+	   $("#resultsGo").hide();
+	   $("#score").html("Correct Ansewrs: " + correct + "<br>" + "Incorrect Answers: " + incorrect + "<br>");
+
+}
+                   

@@ -5,8 +5,21 @@ body {
     background-image: url(http://fullhdpictures.com/wp-content/uploads/2015/11/Amazing-NFL-Wallpaper.jpg);
 }
 
+#start {width: 500px;
+        padding: 50px;
+        background-color:blue;
+        color: red;
+        font-size: 30px;
+        font-family: 'Libre Baskerville', serif;
+        text-shadow: 1px 1px white;
+        text-decoration: none;
+        position: relative;
+        top: 260px;
+    
+}
 
-
+#start:hover {background-color: black;}
+        
 .container {width: 60%;
             height:40%;
             padding: 20%;
@@ -37,7 +50,8 @@ ul {text-shadow: 1px 1px blue;
 
 
 #time { position: relative;
-        right: 100px;}
+        right: 100px;
+        z-index: 1;}
 
 
 #questions {text-align: left;
