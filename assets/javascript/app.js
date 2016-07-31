@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	$("#results").hide();
     $("#actionArea").hide();
-    $("#title").hide();
     console.log(document);  });
 
 var correctTotal = 0;
@@ -37,62 +36,62 @@ function countDown(){
 function stop(){
 
 		clearInterval(counter);
-		timeLeft=120;
-		correct =0;
-		incorrect =0;
+		timeLeft=60;
+		correctTotal =0;
+		wrongTotal =0;
 
 		if($("input[name = q2]:checked").val() == $("#q1d").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 
 		if($("input[name = q2]:checked").val() == $("#q2c").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 
 		if($("input[name = q3]:checked").val() == $("#q3d").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect++;
+			wrongTotal++;
 		}
 		if($("input[name = q4]:checked").val() == $("#q4c").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 
 		if($("input[name = q5]:checked").val() == $("#q5b").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 		if($("input[name = q6]:checked").val() == $("#q6d").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 		if($("input[name = q7]:checked").val() == $("#q7d").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 		if($("input[name = q8]:checked").val() == $("#q8c").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 		if($("input[name = q9]:checked").val() == $("#q9a").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 		if($("input[name = q10]:checked").val() == $("#q10a").val()){
-			correct ++;
+			correctTotal++;
 		} else {
-			incorrect ++;
+			wrongTotal++;
 		}
 
         window.scrollTo(0,0);
@@ -102,6 +101,7 @@ function stop(){
 	   $("#time").hide();
 	   $("#resultsGo").hide();
 	   $("#score").html("Correct Ansewrs: " + correct + "<br>" + "Incorrect Answers: " + incorrect + "<br>");
-
+        
+        console.log(stop);
 }
                    
